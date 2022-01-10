@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  background-color: #121212;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji",
+    sans-serif;
+}
+html.light {
+    header {
+        h1 {
+            color: black;
+        }
+    }
+    main, footer {
+        a {
+            &,
+            &:link,
+            &:active,
+            &:visited {
+                color: black;
+            }
+        }
+    }
+    footer {
+        img {
+            filter: none;
+        }
+    }
+}
+#bg {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  margin: 0;
+}
+body {
+  padding: 24px 12px;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    border-radius: 50%;
+    height: 96px;
+    width: 96px;
+  }
+  h1 {
+    color: #ffffff;
+    margin: 2px;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin-top: 10px;
+  max-width: 680px;
+  a {
+    &,
+    &:link,
+    &:active,
+    &:visited {
+      display: flex;
+      align-items: center;
+      background: #0002;
+      backdrop-filter: blur(10px);
+      border: 3px solid transparent;
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      width: 95%;
+      margin: 5px;
+      border-radius: 10px;
+    }
+    img {
+      height: 45px;
+      width: 45px;
+      margin: 6px;
+      border-radius: 5px;
+    }
+    .img {
+        height: 45px;
+        width: 4em;
+        margin: 6px;
+        border-radius: 5px;
+    }
+    p {
+      text-align: center;
+      width: 100%;
+      margin-right: calc(4em + 3px);
+    }
+    &:hover {
+      background-color: #0001;
+      backdrop-filter: blur(1px);
+      -webkit-backdrop-filter: blur(1px);
+    }
+  }
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px;
+    gap: 1rem;
+    a {
+        &,
+        &:link,
+        &:active,
+        &:visited {
+            color: white;
+            opacity: 1;
+            transition: all .25s;
+            text-decoration: none;
+        }
+        &:hover {
+            opacity: .75;
+        }
+    }
+    img {
+        filter: invert(1);
+        height: 32px;
+        width: 32px;
+    }
+}
+
